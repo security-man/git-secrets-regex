@@ -1,2 +1,7 @@
-# git-secrets-regex
-A collection of simple regex statements to configure git-secrets against common credentials and sensitive parameters
+```bash
+git secrets –add '.*(PASSWORD|PWD|pwd|Password|password)\s*=\s*.+'
+```
+
+```bash
+git secrets –add '.*(access_key|ACCESS_KEY|Access_Key|Access_key)\s*=\s*.+'
+```
