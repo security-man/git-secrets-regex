@@ -49,7 +49,7 @@ git secrets --add '(?i)sv=[\w%-]+&s[ispt]=[\w%-]+&sig=[A-Za-z0-9%/+]{42,}=?&se=[
 
 ### Azure AD Client Secret/Application Password
 ```bash
-git secrets --add '(?i)(client|app)(.{0,20})?secret(.{0,20})?['"][a-zA-Z0-9_\-~!@#$%^&*()+=:;,.?]{16,}['"]'
+git secrets --add '(?i)(client|app)(.{0,20})?secret(.{0,20})?['\"][a-zA-Z0-9_\-~!@#$%^&*()+=:;,.?]{16,}['\"]'
 ```
 
 ### Azure Connection String
@@ -96,7 +96,7 @@ git secrets --add '(?i)redis:\/\/([^:]+:[^@]+@)?[a-zA-Z0-9_.-]+:[0-9]+'
 
 ### DynamoDB Credentials in Code
 ```bash
-git secrets --add '(?i)new\s+AWS.DynamoDB\({(.|\n)*?accessKeyId(.|\n)*?['"][A-Z0-9]{20}['"](.|\n)*?secretAccessKey(.|\n)*?['"][a-zA-Z0-9/+=]{40}['"]'
+git secrets --add '(?i)new\s+AWS.DynamoDB\({(.|\n)*?accessKeyId(.|\n)*?['\"][A-Z0-9]{20}['\"](.|\n)*?secretAccessKey(.|\n)*?['"][a-zA-Z0-9/+=]{40}['"]'
 ```
 
 ### CosmosDB Connection String
@@ -108,7 +108,7 @@ git secrets --add '(?i)AccountEndpoint=https://[^;]+\.documents\.azure\.com.*Acc
 
 ### OAuth Token
 ```bash
-git secrets --add '(?i)(oauth|access)(.{0,20})?token(.{0,20})?['"][a-zA-Z0-9_\-.~+/=]{30,}['"]'
+git secrets --add '(?i)(oauth|access)(.{0,20})?token(.{0,20})?['\"][a-zA-Z0-9_\-.~+/=]{30,}['\"]'
 ```
 
 ### JWT Token
@@ -118,7 +118,7 @@ git secrets --add '(?i)ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*'
 
 ### Generic API Key Pattern
 ```bash
-git secrets --add '(?i)api(.{0,20})?key(.{0,20})?['"][a-zA-Z0-9_\-]{16,}['"]'
+git secrets --add '(?i)api(.{0,20})?key(.{0,20})?['\"][a-zA-Z0-9_\-]{16,}['\"]'
 ```
 
 ### Authentication Bearer Token
@@ -128,7 +128,7 @@ git secrets --add '(?i)bearer\s+[a-zA-Z0-9_\-\.=]+'
 
 ### GraphQL API Token
 ```bash
-git secrets --add '(?i)graphql(.{0,20})?token(.{0,20})?['"][a-zA-Z0-9_\-]{16,}['"]'
+git secrets --add '(?i)graphql(.{0,20})?token(.{0,20})?['\"][a-zA-Z0-9_\-]{16,}['\"]'
 ```
 
 ## Common Service Credentials
