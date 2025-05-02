@@ -47,11 +47,6 @@ git secrets --add '(?i)DefaultEndpointsProtocol=https;AccountName=[^;]+;AccountK
 git secrets --add '(?i)sv=[\w%-]+&s[ispt]=[\w%-]+&sig=[A-Za-z0-9%/+]{42,}=?&se=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z'
 ```
 
-### Azure AD Client Secret/Application Password
-```bash
-git secrets --add "(?i)(client|app)(.{0,20})?secret(.{0,20})?['\"][a-zA-Z0-9_\\-~!@#\$%^&*()+=:;,.?]{16,}['\"]"
-```
-
 ### Azure Connection String
 ```bash
 git secrets --add '(?i)AccountEndpoint=https://[^;]+\.documents\.azure\.com.*AccountKey=[A-Za-z0-9+/=]{88};'
