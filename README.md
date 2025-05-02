@@ -59,11 +59,6 @@ git secrets --add '(?i)https://[a-zA-Z0-9-]+\.vault\.azure\.net(.{0,20})?(secret
 
 ## Database Credentials
 
-### Generic Database Password Pattern
-```bash
-git secrets --add '(?i)(db|database|sql)(.{0,20})?(password|pwd)(.{0,20})?['\"][^'\"]{8,}['\"]'
-```
-
 ### PostgreSQL Connection String
 ```bash
 git secrets --add '(?i)(postgres|pg)(ql)?:\/\/[a-zA-Z0-9_]+:[^@]+@[a-zA-Z0-9._-]+:[0-9]+\/[a-zA-Z0-9_]+'
@@ -87,11 +82,6 @@ git secrets --add '(?i)mongodb(\+srv)?:\/\/[^:]+:[^@]+@[a-zA-Z0-9._-]+'
 ### Redis Connection String
 ```bash
 git secrets --add '(?i)redis:\/\/([^:]+:[^@]+@)?[a-zA-Z0-9_.-]+:[0-9]+'
-```
-
-### DynamoDB Credentials in Code
-```bash
-git secrets --add '(?i)new\s+AWS.DynamoDB\({(.|\n)*?accessKeyId(.|\n)*?['\"][A-Z0-9]{20}['\"](.|\n)*?secretAccessKey(.|\n)*?['"][a-zA-Z0-9/+=]{40}['"]'
 ```
 
 ### CosmosDB Connection String
@@ -143,14 +133,9 @@ git secrets --add '(?i)npm_[a-zA-Z0-9]{36}'
 git secrets --add '-----BEGIN ((EC|RSA|DSA|OPENSSH) )?PRIVATE KEY( BLOCK)?-----'
 ```
 
-### Service Account Credentials (Generic)
-```bash
-git secrets --add '(?i)(service|account)(.{0,20})?(key|secret|token|password)(.{0,20})?['"][a-zA-Z0-9_\-\.=]{16,}['"]'
-```
-
 ### GitHub/GitLab PAT (Personal Access Token)
 ```bash
-git secrets --add '(?i)(github|gitlab)(.{0,20})?(access|api)?(.{0,20})?token(.{0,20})?['"]([a-zA-Z0-9_]{16,}|ghp_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})['"]'
+git secrets --add "(?i)(github|gitlab)(.{0,20})?(access|api)?(.{0,20})?token(.{0,20})?[\'\"]([a-zA-Z0-9_]{16,}|ghp_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})[\'\"]"
 ```
 
 ### CI/CD Pipeline Secret Variables
