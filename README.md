@@ -32,7 +32,7 @@ git secrets --add '.*(api_key|API_key|API_KEY|KEY|access_key|ACCESS_KEY|Access_K
 
 ### AWS Session Token/STS Security Token
 ```bash
-git secrets --add '(?i)aws(.{0,20})?session(.{0,20})?token(.{0,20})?['"][A-Za-z0-9/+=]{16,}['"]'
+git secrets --add '(?i)aws(.{0,20})?session(.{0,20})?token(.{0,20})?['\"][A-Za-z0-9/+=]{16,}['\"]'
 ```
 
 ## Azure Credentials
