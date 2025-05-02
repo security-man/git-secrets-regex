@@ -49,7 +49,7 @@ git secrets --add '(?i)sv=[\w%-]+&s[ispt]=[\w%-]+&sig=[A-Za-z0-9%/+]{42,}=?&se=[
 
 ### Azure AD Client Secret/Application Password
 ```bash
-git secrets --add '(?i)(client|app)(.{0,20})?secret(.{0,20})?['\"][a-zA-Z0-9_\-~!@#$%^&*()+=:;,.?]{16,}['\"]'
+git secrets --add "(?i)(client|app)(.{0,20})?secret(.{0,20})?['\"][a-zA-Z0-9_\\-~!@#\$%^&*()+=:;,.?]{16,}['\"]"
 ```
 
 ### Azure Connection String
