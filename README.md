@@ -21,18 +21,18 @@ To configure git-secrets pre-commit hook scanning against any of the following c
 
 ### 1. Passwords
 ```bash
-git secrets –add '.*(PASSWORD|PWD|pwd|Password|password|passwd|PASSWD)\s*=\s*.+'
+git secrets –-add '.*(PASSWORD|PWD|pwd|Password|password|passwd|PASSWD)\s*=\s*.+'
 ```
 ### 2. API keys
 ```bash
-git secrets –add '.*(api_key|API_key|API_KEY|KEY|access_key|ACCESS_KEY|Access_Key|Access_key)\s*=\s*.+'
+git secrets –-add '.*(api_key|API_key|API_KEY|KEY|access_key|ACCESS_KEY|Access_Key|Access_key)\s*=\s*.+'
 ```
 
 ## AWS Credentials
 
 ### AWS Session Token/STS Security Token
 ```bash
-git secrets –add '(?i)aws(.{0,20})?session(.{0,20})?token(.{0,20})?['\"][A-Za-z0-9/+=]{16,}['\"]'
+git secrets –-add '(?i)aws(.{0,20})?session(.{0,20})?token(.{0,20})?['\"][A-Za-z0-9/+=]{16,}['\"]'
 ```
 
 ## Azure Credentials
