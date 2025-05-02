@@ -32,7 +32,7 @@ git secrets --add '.*(api_key|API_key|API_KEY|KEY|access_key|ACCESS_KEY|Access_K
 
 ### AWS Session Token/STS Security Token
 ```bash
-git secrets --add '(?i)aws(.{0,20})?session(.{0,20})?token(.{0,20})?['\"][A-Za-z0-9/+=]{16,}['\"]'
+git secrets --add '(?i)aws(.{0,20})?session(.{0,20})?token(.{0,20})?['"][A-Za-z0-9/+=]{16,}['"]'
 ```
 
 ## Azure Credentials
@@ -49,7 +49,7 @@ git secrets --add '(?i)sv=[\w%-]+&s[ispt]=[\w%-]+&sig=[A-Za-z0-9%/+]{42,}=?&se=[
 
 ### Azure AD Client Secret/Application Password
 ```bash
-git secrets --add '(?i)(client|app)(.{0,20})?secret(.{0,20})?['\"][a-zA-Z0-9_\-~!@#$%^&*()+=:;,.?]{16,}['\"]'
+git secrets --add '(?i)(client|app)(.{0,20})?secret(.{0,20})?['"][a-zA-Z0-9_\-~!@#$%^&*()+=:;,.?]{16,}['"]'
 ```
 
 ### Azure Connection String
@@ -108,7 +108,7 @@ git secrets --add '(?i)AccountEndpoint=https://[^;]+\.documents\.azure\.com.*Acc
 
 ### OAuth Token
 ```bash
-git secrets --add '(?i)(oauth|access)(.{0,20})?token(.{0,20})?['\"][a-zA-Z0-9_\-.~+/=]{30,}['\"]'
+git secrets --add '(?i)(oauth|access)(.{0,20})?token(.{0,20})?['"][a-zA-Z0-9_\-.~+/=]{30,}['"]'
 ```
 
 ### JWT Token
@@ -118,7 +118,7 @@ git secrets --add '(?i)ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*'
 
 ### Generic API Key Pattern
 ```bash
-git secrets --add '(?i)api(.{0,20})?key(.{0,20})?['\"][a-zA-Z0-9_\-]{16,}['\"]'
+git secrets --add '(?i)api(.{0,20})?key(.{0,20})?['"][a-zA-Z0-9_\-]{16,}['"]'
 ```
 
 ### Authentication Bearer Token
@@ -128,14 +128,14 @@ git secrets --add '(?i)bearer\s+[a-zA-Z0-9_\-\.=]+'
 
 ### GraphQL API Token
 ```bash
-git secrets --add '(?i)graphql(.{0,20})?token(.{0,20})?['\"][a-zA-Z0-9_\-]{16,}['\"]'
+git secrets --add '(?i)graphql(.{0,20})?token(.{0,20})?['"][a-zA-Z0-9_\-]{16,}['"]'
 ```
 
 ## Common Service Credentials
 
 ### Docker Registry Credentials
 ```bash
-git secrets --add '(?i)docker(.{0,20})?(login|auth)(.{0,20})?['\"][a-zA-Z0-9_\-]+['\"](.{0,20})?['\"][a-zA-Z0-9_\-~!@#$%^&*()+=]{8,}['\"]'
+git secrets --add '(?i)docker(.{0,20})?(login|auth)(.{0,20})?['"][a-zA-Z0-9_\-]+['"](.{0,20})?['"][a-zA-Z0-9_\-~!@#$%^&*()+=]{8,}['"]'
 ```
 
 ### NPM Token
@@ -150,32 +150,15 @@ git secrets --add '-----BEGIN ((EC|RSA|DSA|OPENSSH) )?PRIVATE KEY( BLOCK)?-----'
 
 ### Service Account Credentials (Generic)
 ```bash
-git secrets --add '(?i)(service|account)(.{0,20})?(key|secret|token|password)(.{0,20})?['\"][a-zA-Z0-9_\-\.=]{16,}['\"]'
+git secrets --add '(?i)(service|account)(.{0,20})?(key|secret|token|password)(.{0,20})?['"][a-zA-Z0-9_\-\.=]{16,}['"]'
 ```
 
 ### GitHub/GitLab PAT (Personal Access Token)
 ```bash
-git secrets --add '(?i)(github|gitlab)(.{0,20})?(access|api)?(.{0,20})?token(.{0,20})?['\"]([a-zA-Z0-9_]{16,}|ghp_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})['\"]'
+git secrets --add '(?i)(github|gitlab)(.{0,20})?(access|api)?(.{0,20})?token(.{0,20})?['"]([a-zA-Z0-9_]{16,}|ghp_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})['"]'
 ```
 
 ### CI/CD Pipeline Secret Variables
 ```bash
-gut secrets --add '(?i)(travis|circle|github|gitlab)(.{0,20})?(ci|cd)(.{0,20})?(token|key|secret|password)(.{0,20})?['\"][a-zA-Z0-9_\-]{16,}['\"]'
-```
-
-## Other Common Patterns
-
-### Generic Password Pattern
-```bash
-git secrets --add '(?i)(password|passwd|pwd)(.{0,20})?['\"][^'\"]{8,}['\"]'
-```
-
-### Generic Secret Key Pattern
-```bash
-git secrets --add '(?i)(secret|key|token)(.{0,20})?['\"][a-zA-Z0-9_\-\.=]{16,}['\"]'
-```
-
-### Generic Connection String
-```bash
-git secrets --add '(?i)(connectionstring|connstr|conn)(.{0,20})?=(.{0,20})?['\"][^'\"]{12,}['\"]'
+git secrets --add '(?i)(travis|circle|github|gitlab)(.{0,20})?(ci|cd)(.{0,20})?(token|key|secret|password)(.{0,20})?['\"][a-zA-Z0-9_\-]{16,}['\"]'
 ```
