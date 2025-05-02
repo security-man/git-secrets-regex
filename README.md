@@ -130,7 +130,7 @@ git secrets --add '(?i)npm_[a-zA-Z0-9]{36}'
 
 ### SSH Private Key
 ```bash
-git secrets --add -- '-----BEGIN ((EC|RSA|DSA|OPENSSH) )?PRIVATE KEY( BLOCK)?-----'
+git secrets --add '\-\-\-\-\-BEGIN ((EC|RSA|DSA|OPENSSH) )?PRIVATE KEY( BLOCK)?\-\-\-\-\-'
 ```
 
 ### GitHub/GitLab PAT (Personal Access Token)
