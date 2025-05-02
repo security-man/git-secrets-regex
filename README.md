@@ -120,7 +120,7 @@ git secrets --add '(?i)graphql(.{0,20})?token(.{0,20})?['\"][a-zA-Z0-9_\-]{16,}[
 
 ### Docker Registry Credentials
 ```bash
-git secrets --add '(?i)docker(.{0,20})?(login|auth)(.{0,20})?['\"][a-zA-Z0-9_\-]+['\"](.{0,20})?['\"][a-zA-Z0-9_\-~!@#$%^&*()+=]{8,}['\"]'
+git secrets --add '(?i)docker(.{0,20})?(login|auth)(.{0,20})?['\"][a-zA-Z0-9_\-]+['\"](.{0,20})?['\"].{8,}['\"]'
 ```
 
 ### NPM Token
